@@ -81,9 +81,7 @@ class Daemon:
             pf = file(self.pidfile,'r')
             pid = int(pf.read().strip())
             pf.close()
-        except IOError:
-            pid = None
-        except SystemExit:
+        except (IOError, SystemExit):
             pid = None
 
         if pid:
@@ -107,9 +105,7 @@ class Daemon:
             pf = file(self.pidfile,'r')
             pid = int(pf.read().strip())
             pf.close()
-        except IOError:
-            pid = None
-        except ValueError:
+        except (IOError, ValueError):
             pid = None
 
         if not pid:
