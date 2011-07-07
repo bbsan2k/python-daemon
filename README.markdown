@@ -11,11 +11,11 @@ Usage
 Define a class which inherits from `Daemon` and has a `run()` method (which is what will be called once the daemonization is completed.
 
 	from daemon import Daemon
-	
+
 	class pantalaimon(Daemon):
 		def run(self):
 			# Do stuff
-			
+
 Create a new object of your class, specifying where you want your PID file to exist:
 
 	pineMarten = pantalaimon('/path/to/pid.pid')
@@ -45,3 +45,24 @@ The `run()` method will be executed just once so if you want the daemon to be do
 
   [1]: http://docs.python.org/library/sched.html
   [2]: https://github.com/boxedice/sd-agent/blob/master/agent.py#L226
+
+
+Authors
+---------------------
+
+python-daemon was originally created by [David Mytton] ([www.boxedice.com])
+
+**Contributors**
+
+- [Gökmen Görgen]
+
+License
+----------------------
+
+[http://creativecommons.org/licenses/by-sa/3.0/]
+
+
+[David Mytton]: https://github.com/dmytton
+[Gökmen Görgen]: https://github.com/gkmngrgn
+[www.boxedice.com]: www.boxedice.com
+[http://creativecommons.org/licenses/by-sa/3.0/]: http://creativecommons.org/licenses/by-sa/3.0/
